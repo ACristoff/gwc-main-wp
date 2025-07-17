@@ -1,0 +1,194 @@
+@use "global" as *;
+@use "global/utils" as *;
+
+/* /* Error 404 & Search Page
+--------------------------------------------- */
+body.search main.content {
+  margin-top: 170px;
+}
+
+.search .search-results-header {
+  padding-bottom: 40px;
+  position: relative;
+
+  .search-form {
+    max-width: 600px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.search .main-search .search-results-grid {
+  position: relative;
+  padding-top: 40px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    top: 0;
+    background-color: $grey;
+    margin-left: calc(-100vw / 2 + 100% / 2);
+    margin-right: calc(-100vw / 2 + 100% / 2);
+    width: 100vw;
+  }
+}
+
+.search .content,
+.post-page .content,
+.site-inner.not-found .content {
+  padding: 40px 24px;
+  margin-bottom: 40px;
+}
+
+.search .archive-description {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.search .content .entry:last-of-type {
+  margin-bottom: 32px;
+}
+
+.search-results .main-content .search-form {
+  margin-bottom: 40px;
+}
+
+.search .content .entry:last-of-type {
+  margin-bottom: 32px;
+}
+
+.search .content .entry-title {
+  margin: 32px 0 10px;
+  display: inline-block;
+  width: 100%;
+}
+
+.search .content .search-result-meta-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 0;
+  border-top: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+  margin-bottom: 22px;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  & > * {
+    font-size: 14px;
+  }
+}
+
+.search .content .entry-meta {
+  display: none;
+}
+
+.search .content .entry-content p {
+  margin: 0;
+}
+
+.search .content .entry-content .more-link {
+  display: block;
+  font-weight: 600;
+  margin: 12px 0 0 0;
+  color: $secondary;
+}
+
+.search .content .entry-content .more-link:hover {
+  color: $secondary_dark;
+}
+
+/* No content
+--------------------------------------------- */
+.content-error {
+  grid-column: 1/-1;
+  max-width: 600px;
+  text-align: center;
+  padding: 64px 40px;
+  margin: 0 auto;
+}
+
+.content-error .fa-solid {
+  color: $secondary;
+}
+
+.content-error p {
+  margin: 24px 0 0;
+}
+
+/* Error 404
+--------------------------------------------- */
+.site-inner.not-found main > .entry {
+  @extend .container-extra-narrow;
+
+  .entry-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .entry-content p {
+    text-align: center;
+  }
+
+  .search-form {
+    margin-top: 40px;
+  }
+}
+
+/* Error 404 & Search Page - Mediaqueries
+--------------------------------------------- */
+
+@media only screen and (min-width: 960px) {
+  body.search main.content {
+    margin-top: 210px;
+  }
+
+  .search .content,
+  .post-page .content,
+  .site-inner.not-found .content {
+    padding: 60px 40px;
+  }
+
+  .search-content .entry {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  .no-content {
+    padding: 80px 40px;
+  }
+
+  .search .main-search .search-results-grid {
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 80px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .search .main-search .search-results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .search .content,
+  .post-page .content,
+  .site-inner.not-found .content {
+    padding: 40px 0 0;
+  }
+
+  .search-content .entry {
+    padding: 0;
+  }
+  .search .main-search .search-results-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

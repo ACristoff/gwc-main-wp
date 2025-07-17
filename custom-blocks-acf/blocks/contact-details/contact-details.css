@@ -1,0 +1,62 @@
+.ql-contact-details ul {
+  padding-left: 0;
+}
+
+.ql-contact-details ul li {
+  list-style-type: none;
+  padding-left: 32px;
+  position: relative;
+}
+
+.ql-contact-details li::before {
+  content: "";
+  display: block;
+  background-image: url("../../../assets/icons/phone.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 18px;
+  height: 20px;
+  margin-right: 12px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.ql-contact-details li.contact-email::before {
+  background-image: url("../../../assets/logos/email-logo.svg");
+}
+.ql-contact-details li.contact-directions::before {
+  background-image: url("../../../assets/icons/location.svg");
+}
+
+.ql-contact-details ul li a {
+  color: #282828;
+  font-weight: 500;
+}
+.ql-contact-details ul li a:hover {
+  color: #245995;
+}
+
+/* Editor */
+.acf-block-preview .ql-contact-details {
+  padding: 10px;
+  border: 2px dotted #d8d8d8;
+  min-height: 30px;
+  padding-top: 40px;
+  position: relative;
+}
+.bg-dark .acf-block-preview .ql-contact-details {
+  border-color: #eaeaea;
+}
+
+.acf-block-preview .ql-contact-details::before {
+  content: "Contact Details";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #eaeaea;
+  color: #646464;
+  font-size: 14px;
+  padding: 4px 8px;
+}

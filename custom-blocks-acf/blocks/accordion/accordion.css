@@ -1,0 +1,93 @@
+/* Block specific CSS */
+.acf-block.ql-accordion {
+  margin: 12px auto;
+  display: block;
+  max-width: 1000px;
+}
+
+.acf-block-preview .ql-accordion {
+  display: block;
+}
+
+.ql-accordion.last {
+  margin-bottom: 40px;
+}
+
+.ql-accordion h1,
+.ql-accordion h2,
+.ql-accordion h3,
+.ql-accordion h4,
+.ql-accordion h5,
+.ql-accordion h6,
+.ql-accordion p,
+.ql-accordion li {
+  color: #282828;
+}
+
+.ql-accordion .accordion-head {
+  display: block;
+  text-align: start;
+  position: relative;
+  padding: 10px 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #d8d8d8;
+  box-shadow: none;
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.ql-accordion .accordion-title {
+  margin: 0;
+  transition: 200ms ease;
+}
+
+.accordion-head:hover .accordion-title {
+  color: #245995;
+}
+
+.ql-accordion .accordion-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: inline-block;
+  background-image: url("../../../assets/icons/add-circle-blue.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  transition: background-image 200ms ease;
+}
+
+.ql-accordion .accordion-head.active .accordion-title::after {
+  background-image: url("../../../assets/icons/remove-circle-blue.svg");
+}
+
+.ql-accordion .accordion-body {
+  background-color: transparent;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 200ms ease;
+}
+
+.ql-accordion .accordion-body > *:first-of-type {
+  margin-top: 24px;
+}
+.ql-accordion .accordion-body > *:last-of-type {
+  margin-bottom: 24px;
+}
+
+.ql-accordion ul li {
+  list-style-type: disc;
+  padding-left: 24px;
+}
+
+/* Editor */
+.acf-block-preview .ql-accordion .accordion-body {
+  max-height: unset;
+}

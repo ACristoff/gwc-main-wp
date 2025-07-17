@@ -1,0 +1,349 @@
+@use "global" as *;
+
+/* Hero Section
+---------------------------------------------------------------------------- */
+.hero-primary,
+.hero-secondary,
+#woo-shop-banner {
+  position: relative;
+  color: $white;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-primary {
+  height: 100vh;
+}
+body.logged-in .hero-primary {
+  height: calc(100vh - 32px);
+}
+
+.hero-secondary,
+.hero-secondary .hero-content-wrap,
+#woo-shop-banner,
+#woo-shop-banner .banner-content-wrap {
+  min-height: 55vh;
+}
+body.logged-in .hero-secondary,
+body.logged-in .hero-secondary .hero-content-wrap,
+body.logged-in #woo-shop-banner,
+body.logged-in #woo-shop-banner .banner-content-wrap {
+  min-height: calc(55vh - 32px);
+}
+
+body.logged-in .hero-secondary.hero-minimal,
+body.logged-in .hero-secondary.hero-minimal .hero-content-wrap {
+  min-height: 25vh;
+}
+
+.hero-primary {
+  padding-top: 144px;
+}
+.hero-secondary {
+  margin-top: 144px;
+}
+
+.hero-primary,
+.hero-secondary {
+  .hero-content-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+
+    .fc-rich-text-block {
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+
+    .fc-button-block {
+      margin-top: 30px;
+    }
+
+    h1,
+    h2 {
+      margin-bottom: 12px;
+    }
+  }
+
+  .hero-background-wrap,
+  .entry-image {
+    position: absolute;
+    inset: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba($black, 0.4);
+      pointer-events: none;
+    }
+  }
+
+  .hero-content {
+    padding: 10px $site-gap_tablet;
+    position: relative;
+    width: 100%;
+  }
+
+  embed,
+  iframe,
+  img,
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1920 / 1080;
+  }
+}
+
+.hero-primary .hero-content-wrap,
+.hero-secondary:not(.hero-minimal) .hero-content-wrap {
+  h1,
+  h2,
+  h6,
+  p,
+  a,
+  .button.button-outlined {
+    color: $white;
+  }
+}
+
+.hero-secondary.hero-minimal {
+  min-height: 25vh;
+
+  .hero-background-wrap,
+  .entry-image {
+    display: none;
+  }
+
+  .hero-content-wrap {
+    min-height: 25vh;
+  }
+
+  .hero-content {
+    color: $black;
+    text-align: center;
+    max-width: unset;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    h1,
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+    .sub-heading {
+      margin-top: 12px;
+      color: $primary;
+    }
+  }
+
+  .back-to-my-account {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: start;
+
+    a {
+      padding: 6px;
+      color: $black;
+
+      &:hover,
+      &:focus {
+        color: $primary;
+      }
+
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.hero-primary {
+  .hero-slider {
+    height: calc(100vh - 248px);
+  }
+  .hero-background-wrap {
+    width: 100%;
+    height: 100%;
+    inset: unset;
+  }
+  .hero-content-wrap .fc-icon-block {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.single-product .hero-secondary,
+.hero-secondary.has-no-thumbnail,
+.search .hero-secondary,
+.woocommerce-cart .hero-secondary,
+.woocommerce-checkout .hero-secondary,
+.woocommerce-account .hero-secondary {
+  .hero-content::before {
+    display: none;
+  }
+}
+
+.hero-background-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-position: center;
+}
+
+/*  WooCommerce shop banners
+--------------------------------------------- */
+#woo-shop-banner {
+  position: relative;
+
+  .banner-image-wrap {
+    position: absolute;
+    inset: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba($black, 0.2);
+    }
+  }
+
+  .banner-content-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+
+    .banner-content {
+      padding: 40px $site-gap_tablet;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-weight: 600;
+    }
+  }
+}
+
+/* Hero Section - Mediaqueries
+--------------------------------------------- */
+
+@media only screen and (min-width: 960px) {
+  .hero-primary,
+  .hero-secondary {
+    .hero-content {
+      padding: 10px $site-gap_desktop;
+
+      .fc-rich-text-block {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .hero-primary {
+    padding-top: 216px;
+  }
+  .hero-secondary {
+    margin-top: 216px;
+  }
+
+  /*  WooCommerce shop banners
+--------------------------------------------- */
+  #woo-shop-banner {
+    .banner-content-wrap {
+      .banner-content {
+        padding: 40px $site-gap_desktop;
+      }
+      h1 {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 783px) {
+  body.logged-in #woo-shop-banner,
+  body.logged-in #woo-shop-banner .banner-content-wrap {
+    min-height: calc(40vh - 46px);
+  }
+  body.logged-in .hero-primary {
+    height: calc(100vh - 46px);
+  }
+  body.logged-in .hero-secondary,
+  body.logged-in .hero-secondary .hero-content-wrap {
+    min-height: calc(55vh - 46px);
+  }
+
+  .hero-content-wrap {
+    height: calc(100vh - 190px);
+  }
+  .hero-primary .hero-slider {
+    height: calc(100vh - 190px);
+  }
+  .hero-primary .hero-slide .hero-content-wrap {
+    &.mobile-align-top {
+      justify-content: flex-start;
+      padding-top: 20px;
+    }
+    &.mobile-align-bottom {
+      justify-content: flex-end;
+      padding-bottom: 60px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hero-primary {
+    embed,
+    iframe,
+    img,
+    video {
+      aspect-ratio: 1280 / 1710;
+    }
+  }
+  .hero-primary .hero-content-wrap,
+  .hero-secondary .hero-content-wrap {
+    .hero-content {
+      padding: 10px;
+    }
+
+    .fc-button-block {
+      margin-bottom: 0;
+    }
+  }
+
+  /*  WooCommerce shop banners
+--------------------------------------------- */
+  #woo-shop-banner,
+  #woo-shop-banner .banner-content-wrap {
+    min-height: 40vh;
+  }
+
+  #woo-shop-banner {
+    .banner-content-wrap {
+      .banner-content {
+        padding: 40px $site-gap_mobile;
+      }
+      h1 {
+        font-size: 28px;
+      }
+    }
+  }
+}

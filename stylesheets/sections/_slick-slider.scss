@@ -1,0 +1,115 @@
+@use "global" as *;
+
+/* Slick Slider
+---------------------------------------------------------------------------- */
+
+.site-container .slick-slider {
+  button.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      background-image: url("assets/icons/chevron-right.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 14px;
+      height: 25px;
+    }
+
+    &.slick-prev::before {
+      background-image: url("assets/icons/chevron-left.svg");
+    }
+
+    &:hover,
+    &:focus {
+      border: none;
+      background-color: transparent;
+      opacity: 0.8;
+    }
+  }
+
+  .slick-prev {
+    left: 20px;
+  }
+  .slick-next {
+    right: 20px;
+  }
+
+  .slick-list {
+    height: 100%;
+  }
+
+  .slick-track {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .slick-slide {
+    position: relative;
+    display: flex;
+    height: auto;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+
+    li {
+      padding: 6px;
+    }
+
+    button {
+      background-color: $grey_dark;
+      padding: 0;
+      border-radius: 4px;
+      height: 6px;
+      width: 30px;
+      border: none;
+      box-shadow: none;
+      font-size: 0;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .slick-active button {
+      background-color: $white;
+      width: 100px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .site-container .slick-slider {
+    .slick-prev {
+      left: 10px;
+    }
+    .slick-next {
+      right: 10px;
+    }
+
+    .slick-dots {
+      .slick-active button {
+        width: 80px;
+      }
+    }
+  }
+}

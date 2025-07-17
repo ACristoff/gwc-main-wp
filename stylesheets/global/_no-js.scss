@@ -1,0 +1,111 @@
+/* NO Javascript Styles
+--------------------------------------------- */
+body.no-js {
+  // Hero Primary
+  .hero-primary {
+    .hero-slider .hero-slide:not(:first-of-type) {
+      display: none;
+    }
+    .hero-slider,
+    .hero-slide {
+      height: 100%;
+    }
+    .hero-slide {
+      display: flex;
+    }
+  }
+
+  // Primary navigation
+  .site-header > .wrap {
+    grid-template-columns: 1fr;
+
+    .nav-primary {
+      padding: 0;
+      
+    .genesis-nav-menu {
+      flex-wrap: wrap;
+      justify-content: right;
+      align-items: center;
+      
+        .menu-item {
+          display: inline-block;
+          width: auto;
+        }
+        .menu-item a {
+          font-size: 16px;
+          line-height: 1.125;
+        }
+        .menu-item:not(.nav-button) a {
+          border-bottom: none;
+          padding: 16px 1.25vw !important;
+        }
+        .menu-item.rolex-clock {
+          width: 0;
+          margin: 0;
+          height: 96px;
+        }
+      }
+    }
+  }
+
+  // Blog page
+  #archive-blog {
+    form.searchandfilter > ul > li * {
+      color: #d8d8d8;
+      pointer-events: none;
+    }
+    form.searchandfilter > ul > li .sf-label-radio {
+      border-color: #f8f8f8;
+    }
+    form.searchandfilter > ul > li.sf-field-search > label::after {
+      display: none;
+    }
+    form.searchandfilter > ul > li.sf-field-search input::placeholder {
+      color: #d8d8d8;
+    }
+    form.searchandfilter > ul > li li.sf-option-active .sf-label-radio {
+      border-color: #f8f8f8;
+      background-color: #f8f8f8 !important;
+    }
+  }
+
+  // WPForms
+  div.wpforms-container-full .wpforms-form noscript.wpforms-error-noscript {
+    width: 100%;
+    display: block;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #FFFAFA;
+    border: 1px solid #990000;
+  }
+  .ql-multi-form-selector .ql-form-nav-menu a.ql-menu-item {
+    color: #d8d8d8;
+    pointer-events: none;
+  }
+  .ql-multi-form-selector .ql-form-nav-menu a.ql-menu-item::after {
+    background-color: #f8f8f8;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  body.no-js {
+    // Primary navigation
+    .site-header > .wrap {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-gap: 32px;
+      align-items: center;
+
+      .nav-primary {
+        padding: 0 0 0 140px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 783px) {
+  body.no-js {
+    .hero-primary .hero-slide {
+      align-items: flex-end;
+    }
+  }
+}

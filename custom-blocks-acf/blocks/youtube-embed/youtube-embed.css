@@ -1,0 +1,48 @@
+.ql-youtube-embed {
+  display: block;
+}
+.ql-youtube-embed .ql-youtube-embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.ql-youtube-embed .caption {
+  font-size: 14px;
+  color: #767676;
+  margin-bottom: 0;
+  margin-top: 10px;
+  line-height: 1.1;
+  text-align: center;
+}
+
+/* Missing embed URL */
+.acf-block-preview .ql-youtube-embed .ql-youtube-embed-empty {
+  position: relative;
+  display: block;
+  min-height: 400px;
+  background-color: #d4d4d4;
+  padding: 10px;
+  border: 2px dotted #767676;
+}
+.acf-block-preview .ql-youtube-embed .ql-youtube-embed-empty::after {
+  content: "Please enter a valid YouTube URL or iFrame code";
+  color: #212121;
+  font-style: italic;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+@media only screen and (min-width: 1025px) {
+  .acf-block-preview .ql-youtube-embed:not(.alignfull) {
+    max-width: 83.33vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .ql-youtube-embed .caption {
+    font-size: 10px;
+  }
+}

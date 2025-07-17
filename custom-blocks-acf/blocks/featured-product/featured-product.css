@@ -1,0 +1,111 @@
+.ql-featured-product {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+}
+
+.ql-featured-product .column {
+  position: relative;
+}
+
+.ql-featured-product .column-content {
+  padding: 60px 0px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+}
+
+.ql-featured-product .column-image {
+  aspect-ratio: 1.5/1;
+  position: relative;
+}
+
+.ql-featured-product .column-image img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.ql-featured-product .column-image::before {
+  content: "";
+  position: absolute;
+  height: 80%;
+  width: 90%;
+  top: -15px;
+  left: -15px;
+  background-color: #245995;
+}
+
+.tudor-post .ql-featured-product .column-image::before {
+  background-color: #be0f00;
+}
+
+.ql-featured-product
+  .column-content
+  .ql-button.button-display-inline:not(:first-of-type) {
+  margin-left: 8px;
+}
+
+/* Reverse columns */
+.ql-featured-product.reverse-columns .column-image::before {
+  bottom: -15px;
+  left: unset;
+  right: -15px;
+}
+
+@media only screen and (min-width: 960px) {
+  .ql-featured-product {
+    flex-direction: initial;
+    padding-top: 30px;
+  }
+
+  .ql-featured-product .column-content {
+    flex-basis: 50%;
+    z-index: 1;
+    margin-top: 0;
+  }
+
+  .ql-featured-product .column-image {
+    flex-basis: 50%;
+    z-index: 1;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .ql-featured-product .column-image::before {
+    top: -30px;
+    left: -30px;
+  }
+
+  .ql-featured-product .column-content-inner {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  /* Reverse columns */
+  .ql-featured-product.reverse-columns {
+    flex-direction: row-reverse;
+  }
+  .ql-featured-product.reverse-columns .column-content {
+    margin-right: 0;
+  }
+  .ql-featured-product.reverse-columns .column-image::before {
+    bottom: -30px;
+    left: unset;
+    right: -30px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .ql-featured-product .column-content {
+    padding: 40px 0;
+  }
+
+  .ql-featured-product
+    .column-content
+    .ql-button.button-display-inline:not(:first-of-type) {
+    margin-left: 0;
+  }
+}

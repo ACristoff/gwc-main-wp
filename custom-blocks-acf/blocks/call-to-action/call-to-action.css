@@ -1,0 +1,65 @@
+.ql-cta {
+  padding: 80px 40px;
+  position: relative;
+}
+
+.ql-cta .ql-cta-inner {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.ql-cta .ql-cta-inner * {
+  text-align: center;
+}
+
+.ql-cta .ql-cta-inner *,
+.ql-cta .ql-cta-inner .wp-block-pullquote p:first-of-type::before,
+.ql-cta .ql-cta-inner cite,
+.acf-block-preview .ql-cta .ql-cta-inner cite {
+  color: #fff;
+}
+
+.ql-cta .ql-cta-inner .wp-block-pullquote {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.ql-cta .ql-cta-inner > :last-child {
+  margin-bottom: 0;
+}
+
+.ql-cta-color-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+/* Editor */
+.acf-block-preview .ql-cta {
+  border: 2px dotted #ccc;
+  position: relative;
+}
+
+.acf-block-preview .ql-cta::before {
+  content: "Call-To-Action";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #eaeaea;
+  color: #646464;
+  font-size: 14px;
+  padding: 4px 8px;
+}
+
+@media only screen and (min-width: 960px) {
+  .ql-cta {
+    padding: 100px 80px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .ql-cta {
+    padding: 60px 20px;
+  }
+}

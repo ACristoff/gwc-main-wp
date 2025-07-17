@@ -1,0 +1,232 @@
+/* Block specific CSS */
+.ql-button,
+.acf-block-preview .ql-button {
+  margin-top: 6px;
+  margin-bottom: 24px;
+}
+
+.ql-button a,
+.acf-block-preview .ql-button a {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #245995;
+  border: 2px solid #245995;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.15);
+}
+
+.ql-button a:hover,
+.acf-block-preview .ql-button a:hover {
+  background-color: #1f4b7f;
+  border: 2px solid #1f4b7f;
+  color: #fff;
+  opacity: 1;
+}
+
+/* Button display */
+.ql-button.button-display-inline {
+  display: inline-block;
+}
+
+/* Button icons */
+.ql-button.icon-arrow-right a::after,
+.ql-button.icon-download a::after {
+  content: "";
+  display: inline-block;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+  transition: background-image 200ms ease;
+}
+
+.ql-button.icon-arrow-right a::after,
+.bg-dark .ql-button.ql-button-outlined.icon-arrow-right a::after,
+.ql-button.ql-button-outlined.icon-arrow-right a:hover::after {
+  background-image: url("../../../assets/icons/arrow-right-white.svg");
+}
+.ql-button.ql-button-outlined.icon-arrow-right a::after,
+.ql-button.button-minimal.icon-arrow-right a::after {
+  background-image: url("../../../assets/icons/arrow-right-black.svg");
+}
+
+.ql-button.icon-download a::after,
+.bg-dark .ql-button.ql-button-outlined.icon-download a::after,
+.ql-button.ql-button-outlined.icon-download a:hover::after {
+  background-image: url("../../../assets/icons/download-white.svg");
+}
+.ql-button.ql-button-outlined.icon-download a::after,
+.ql-button.button-minimal.icon-download a::after {
+  background-image: url("../../../assets/icons/download-black.svg");
+}
+
+/* Button alignment */
+.ql-button.button-left {
+  text-align: start;
+}
+.ql-button.button-center {
+  text-align: center;
+}
+.ql-button.button-right {
+  text-align: end;
+}
+
+/* Focus states for accessiblity */
+body:not(.user-is-tabbing) .ql-button a:focus {
+  box-shadow: 0 0 0 0.2rem rgba(36, 89, 149, 0.3);
+}
+body:not(.user-is-tabbing) .ql-button.ql-button-green a:focus {
+  box-shadow: 0 0 0 0.2rem rgba(18, 119, 73, 0.3);
+}
+body:not(.user-is-tabbing) .ql-button.ql-button-red a:focus {
+  box-shadow: 0 0 0 0.2rem rgba(190, 15, 0, 0.3);
+}
+body:not(.user-is-tabbing) .bg-dark .ql-button a:focus {
+  box-shadow: 0 0 0 0.2rem rgba(225, 255, 255, 0.3);
+}
+
+/* Button colour variations
+--------------------------------------------- */
+/* Button green */
+.ql-button.ql-button-green a,
+.acf-block-preview .ql-button.ql-button-green a {
+  background-color: #127749;
+  border: 2px solid #127749;
+  color: #fff;
+}
+.ql-button.ql-button-green a:hover,
+.ql-button.ql-button-green a:focus {
+  background-color: #0f673f;
+  color: #fff;
+}
+
+/* Button red */
+.ql-button.ql-button-red a,
+.acf-block-preview .ql-button.ql-button-red a {
+  background-color: #be0f00;
+  border: 2px solid #be0f00;
+  color: #fff;
+}
+.ql-button.ql-button-red a:hover,
+.ql-button.ql-button-red a:focus {
+  background-color: #a20d00;
+  color: #fff;
+}
+
+/* Button outlined */
+.ql-button.ql-button-outlined a,
+.acf-block-preview .ql-button.ql-button-outlined a {
+  background-color: transparent;
+  border: 2px solid #245995;
+  color: #282828;
+  box-shadow: none;
+}
+.ql-button.ql-button-outlined a:hover,
+.ql-button.ql-button-outlined a:focus {
+  background-color: #245995;
+  color: #fff;
+}
+.ql-button.ql-button-green.ql-button-outlined a,
+.acf-block-preview .ql-button.ql-button-green.ql-button-outlined a {
+  border: 2px solid #127749;
+}
+.ql-button.ql-button-green.ql-button-outlined a:hover,
+.ql-button.ql-button-green.ql-button-outlined a:focus {
+  background-color: #127749;
+}
+.ql-button.ql-button-red.ql-button-outlined a,
+.acf-block-preview .ql-button.ql-button-red.ql-button-outlined a {
+  border: 2px solid #be0f00;
+}
+.ql-button.ql-button-red.ql-button-outlined a:hover,
+.ql-button.ql-button-red.ql-button-outlined a:focus {
+  background-color: #be0f00;
+}
+
+/* Button minimal */
+.ql-button.button-minimal a,
+.acf-block-preview .ql-button.button-minimal a {
+  padding: 10px 0;
+  border: none !important;
+  background-color: transparent !important;
+  border-radius: 0;
+  box-shadow: none;
+  color: #282828;
+}
+
+.ql-button.button-minimal a:hover,
+.ql-button.button-minimal a:focus,
+.acf-block-preview .ql-button.button-minimal a:hover,
+.acf-block-preview .ql-button.button-minimal a:focus {
+  color: #245995;
+}
+
+/* Button on a dark background */
+.bg-dark .ql-button a,
+.bg-dark .ql-button.ql-button-outlined a,
+.bg-dark .acf-block-preview .ql-button a,
+.bg-dark .acf-block-preview .ql-button.ql-button-outlined a {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  box-shadow: none;
+}
+.bg-dark .ql-button a:hover,
+.bg-dark .ql-button a:focus,
+.bg-dark .ql-button.ql-button-outlined a:hover,
+.bg-dark .ql-button.ql-button-outlined a:focus {
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #282828;
+  box-shadow: none;
+}
+
+.bg-dark .ql-button.button-minimal a,
+.bg-dark .acf-block-preview .ql-button.button-minimal a {
+  color: #fff;
+}
+
+/* Editor view
+--------------------------------------------- */
+.acf-block-preview .ql-button a {
+  pointer-events: none;
+  margin-top: 0;
+}
+
+.block-editor__container
+  .editor-styles-wrapper
+  .ql-button:not(.ql-button-outlined):not(.button-minimal)
+  a {
+  color: #fff;
+}
+
+.block-editor-block-list__block[data-title="Button"] {
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+/* Rolex Editorial Post Styling */
+.rolex-post .ql-button a,
+.rolex-post-admin .ql-button a {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 480px) {
+  .ql-button a,
+  .acf-block-preview .ql-button a {
+    padding: 8px 18px;
+  }
+}

@@ -1,0 +1,67 @@
+// color variables
+$white: #fff;
+$grey_light: #f8f8f8;
+$grey: #d8d8d8;
+$grey_dark: #a4a4a4;
+$black: #282828;
+
+$primary: #245995;
+$primary_light: lighten($primary, 15%);
+$primary_dark: darken($primary, 10%);
+$secondary: #245995;
+$secondary_light: lighten($secondary, 10%);
+$secondary_dark: darken($secondary, 10%);
+
+$green: #127749;
+$green_light: lighten($green, 10%);
+$green_dark: darken($green, 10%);
+
+$red: #be0f00;
+$red_light: lighten($red, 10%);
+$red_dark: darken($red, 10%);
+
+// site margins variables
+$site-gap_desktop: 64px;
+$site-gap_tablet: 40px;
+$site-gap_mobile: 20px;
+
+// box shadow variables
+$menu_box-shadow: 0px 30px 25px 0px rgba(0, 0, 0, 0.05);
+$content_box-shadow: 4px 0px 40px 0px rgba(0, 0, 0, 0.1);
+$button_box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.15);
+
+// font variables
+@font-face {
+  font-family: "Helvetica";
+  src: url("assets/fonts/Helvetica/Helvetica-Light.ttf") format(truetype);
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("assets/fonts/Helvetica/Helvetica-Regular.ttf") format(truetype);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("assets/fonts/Helvetica/Helvetica-Oblique.ttf") format(truetype);
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("assets/fonts/Helvetica/Helvetica-Bold.ttf") format(truetype);
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("assets/fonts/Helvetica/Helvetica-BoldOblique.ttf") format(truetype);
+  font-style: italic;
+  font-weight: 700;
+}
+
+$font_primary: "Quicksand", sans-serif;
+$font_secondary: "DM Sans", sans-serif;
+$font_helvetica: "Helvetica", sans-serif;

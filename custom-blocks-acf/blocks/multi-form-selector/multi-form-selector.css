@@ -1,0 +1,85 @@
+.ql-multi-form-selector .ql-multi-form-description {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.ql-multi-form-selector .ql-multi-form-description .form-title:not(.active),
+.ql-multi-form-selector
+  .ql-multi-form-description
+  .form-description:not(.active) {
+  display: none;
+}
+
+.ql-multi-form-selector .ql-multi-form-selector-wrap {
+  box-shadow: 4px 0px 40px 0px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.ql-multi-form-selector .ql-form-nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-bottom: 2px solid #d8d8d8;
+}
+
+.ql-multi-form-selector .ql-form-nav-menu .ql-menu-item {
+  padding: 20px 40px;
+  color: #282828;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.ql-multi-form-selector .ql-form-nav-menu .ql-menu-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background-color: #245995;
+  height: 4px;
+  width: 0%;
+  transition: width 200ms ease;
+  transform: translate(-50%, 0);
+}
+
+.ql-multi-form-selector .ql-form-nav-menu .ql-menu-item.rolex::after {
+  background-color: #127749;
+}
+.ql-multi-form-selector .ql-form-nav-menu .ql-menu-item.tudor::after {
+  background-color: #be0f00;
+}
+.ql-multi-form-selector .ql-form-nav-menu .ql-menu-item.chopard::after {
+  background-color: #282828;
+}
+
+.ql-multi-form-selector .ql-form-nav-menu .ql-menu-item:hover,
+.ql-multi-form-selector .ql-form-nav-menu .ql-menu-item:focus,
+.ql-multi-form-selector .ql-form-nav-menu .ql-menu-item.active {
+  color: #245995;
+}
+.ql-multi-form-selector .ql-form-nav-menu .ql-menu-item.active.rolex {
+  color: #127749;
+}
+.ql-multi-form-selector .ql-form-nav-menu .ql-menu-item.active.tudor {
+  color: #be0f00;
+}
+.ql-multi-form-selector .ql-form-nav-menu .ql-menu-item.active.chopard {
+  color: #282828;
+}
+
+.ql-multi-form-selector .ql-form-nav-menu .ql-menu-item.active::after {
+  width: 100%;
+}
+
+.ql-multi-form-selector .wpforms-container {
+  box-shadow: none;
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 960px) {
+  .ql-multi-form-selector .ql-multi-form-description {
+    padding: 40px 80px;
+  }
+}

@@ -1,0 +1,66 @@
+.ql-post-loop .ql-loop-grid {
+  margin-bottom: 0;
+}
+.ql-post-loop .ql-loop-grid .entry .entry-image {
+  max-height: 400px;
+}
+
+/* Editor */
+.acf-block-preview .ql-post-loop {
+  padding: 10px;
+  border: 2px dotted #ccc;
+  min-height: 30px;
+}
+.acf-block-preview .ql-post-loop {
+  padding-top: 12px;
+  position: relative;
+}
+
+.acf-block-preview .ql-post-loop::before {
+  content: "Post Loop";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #eaeaea;
+  color: #646464;
+  font-size: 14px;
+  padding: 4px 8px;
+}
+
+.acf-block-preview .ql-post-loop .ql-editor-preview {
+  display: block;
+  height: 720px;
+  width: 100%;
+}
+.acf-block-preview .ql-post-loop .ql-editor-preview .editor-preview-image {
+  width: 100%;
+  height: 100%;
+}
+.acf-block-preview .ql-post-loop .ql-editor-preview .editor-preview-image img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (min-width: 960px) {
+  .ql-post-loop .ql-loop-grid .entry {
+    display: flex;
+    flex-direction: row;
+  }
+  .ql-post-loop .ql-loop-grid .entry .entry-content-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 60%;
+  }
+  .ql-post-loop .ql-loop-grid .entry .entry-image-post-link {
+    flex-basis: 40%;
+  }
+  .ql-post-loop .ql-loop-grid .entry .entry-image {
+    aspect-ratio: 1.2/1;
+    max-height: unset;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+}

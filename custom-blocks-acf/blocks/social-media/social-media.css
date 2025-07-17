@@ -1,0 +1,61 @@
+/* Icon colour */
+.ql-social-media.icon-primary svg path,
+.ql-social-media.icon-primary svg rect {
+  fill: #245995;
+}
+.ql-social-media.icon-white svg path,
+.ql-social-media.icon-white svg rect {
+  fill: #fff;
+}
+.ql-social-media.icon-black svg path,
+.ql-social-media.icon-black svg rect {
+  fill: #282828;
+}
+.ql-social-media .svg-logo svg path,
+.ql-social-media .svg-logo svg rect {
+  transition: opacity 150ms ease;
+}
+
+.ql-social-media .svg-logo:hover svg path,
+.ql-social-media .svg-logo:hover svg rect,
+.ql-social-media .svg-logo:focus svg path,
+.ql-social-media .svg-logo:focus svg rect {
+  opacity: 0.8;
+}
+
+.acf-block-preview .ql-social-media-list {
+  padding-left: 0;
+  margin-bottom: 12px;
+}
+
+.acf-block-preview .ql-social-media-list li:first-of-type a {
+  pointer-events: none;
+}
+
+.ql-social-media-list {
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.ql-social-media-list > li {
+  display: inline-block;
+}
+
+.ql-social-media-list > li a {
+  padding: 4px;
+  display: block;
+}
+
+.ql-social-media-list > li:first-of-type a {
+  padding-left: 0;
+}
+
+.ql-social-media-list > li:last-of-type a {
+  padding-right: 0;
+}
+
+.ql-social-media-list div[class^="svg-logo"],
+.ql-social-media-list div[class^="svg-logo"] svg {
+  max-width: 30px;
+  max-height: 30px;
+}

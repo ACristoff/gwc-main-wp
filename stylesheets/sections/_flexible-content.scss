@@ -1,0 +1,60 @@
+@use "global" as *;
+
+/* Flexible Content - Title Block
+--------------------------------------------- */
+.fc-title-block.has-icon {
+  margin-bottom: 20px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-bottom: 0;
+    padding-right: 38px;
+    display: flex;
+    align-items: center;
+  }
+
+  .custom-icon {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+}
+
+/* Flexible Content - Button Block
+--------------------------------------------- */
+.fc-button-block {
+  margin-bottom: 24px;
+  display: inline-block;
+
+  /* Button alignment */
+  &.button-left {
+    text-align: start;
+  }
+  &.button-center {
+    text-align: center;
+  }
+  &.button-right {
+    text-align: end;
+  }
+}
+
+.fc-button-block:not(:first-of-type) {
+  margin-left: 8px;
+}
+
+/* Flexible Content - Rich Text Block
+--------------------------------------------- */
+.fc-rich-text-block {
+  margin-top: 8px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+/* Flexible Content - Icon Block
+--------------------------------------------- */
+.fc-icon-block {
+  margin-bottom: 30px;
+}

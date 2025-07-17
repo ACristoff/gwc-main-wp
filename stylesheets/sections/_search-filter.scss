@@ -1,0 +1,113 @@
+@use "global" as *;
+
+/* Search & Filter Forms
+---------------------------------------------------------------------------- */
+.archive-filter-form {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.archive-filter-form .searchandfilter {
+  & > ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .sf-field-search {
+    text-align: start;
+    z-index: 1;
+    width: 100%;
+
+    & > label {
+      position: relative;
+      max-width: unset;
+      width: 100%;
+    }
+
+    & > label::after {
+      content: "";
+      display: inline-block;
+      background-image: url("assets/icons/search-blue.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      pointer-events: none;
+    }
+  }
+
+  & > ul li[class^="sf-field-taxonomy"] {
+    flex-basis: 100%;
+
+    & > ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      padding-left: 0;
+    }
+
+    /* Hide the browser's default radio button */
+    & > ul > li {
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+      padding: 0;
+    }
+
+    .sf-input-radio {
+      position: absolute;
+      opacity: 0;
+      height: 0;
+      width: 0;
+    }
+
+    /* Style the label */
+    .sf-label-radio {
+      background-color: transparent;
+      border: 1px solid $grey_dark;
+      color: $grey_dark;
+      padding: 8px 14px;
+      font-size: 14px;
+      font-weight: 600;
+      white-space: normal;
+      transition: 200ms ease;
+    }
+
+    /* When the radio button is checked and on hover + focus */
+    .sf-input-radio:checked ~ .sf-label-radio,
+    .sf-label-radio:hover,
+    .sf-label-radio:focus {
+      background-color: $secondary;
+      color: $white;
+      border: 1px solid $secondary;
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .archive-filter-form {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .archive-filter-form .searchandfilter {
+    & > ul {
+      flex-wrap: nowrap;
+    }
+    .sf-field-search {
+      max-width: 400px;
+    }
+
+    & > ul li[class^="sf-field-taxonomy"] {
+      flex-basis: 50%;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+.ql-image-text-column-alt {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.ql-image-text-column-alt .bg-dark h1,
+.ql-image-text-column-alt .bg-dark h2,
+.ql-image-text-column-alt .bg-dark h3,
+.ql-image-text-column-alt .bg-dark h4,
+.ql-image-text-column-alt .bg-dark h5,
+.ql-image-text-column-alt .bg-dark h6,
+.ql-image-text-column-alt .bg-dark span,
+.ql-image-text-column-alt .bg-dark a,
+.ql-image-text-column-alt .bg-dark p,
+.ql-image-text-column-alt .bg-dark li {
+  color: #fff;
+}
+
+.ql-image-text-column-alt .column {
+  position: relative;
+  overflow: hidden;
+}
+
+.ql-image-text-column-alt .column-content {
+  padding: 80px 0 60px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+}
+
+.ql-image-text-column-alt .column-content.bg-primary {
+  background-color: #245995;
+}
+.ql-image-text-column-alt .column-content.bg-grey_light {
+  background-color: #f8f8f8;
+}
+.ql-image-text-column-alt .column-content.bg-black {
+  background-color: #282828;
+}
+.ql-image-text-column-alt .column-content.bg-transparent {
+  background-color: transparent;
+}
+
+.ql-image-text-column-alt .column-content-inner {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.ql-image-text-column-alt .column-image {
+  aspect-ratio: 1.2/1;
+  position: relative;
+}
+
+.ql-image-text-column-alt .column-image img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.ql-image-text-column-alt .column-image.image-contain img {
+  object-fit: contain;
+}
+
+.ql-image-text-column-alt
+  .column-content
+  .ql-button.button-display-inline:not(:first-of-type) {
+  margin-left: 8px;
+}
+
+/* Rolex Editorial Post Styling */
+.rolex-post .ql-image-text-column-alt {
+  margin-left: calc(-100vw / 2 + 100% / 2);
+  margin-right: calc(-100vw / 2 + 100% / 2);
+  width: 100vw;
+}
+.rolex-post .ql-image-text-column-alt .column-image {
+  aspect-ratio: 1.5/1;
+}
+
+/* Editor */
+.acf-block-preview .ql-image-text-column-alt.align-full {
+  margin-left: 0;
+  margin-right: 0;
+  width: auto;
+}
+
+@media only screen and (min-width: 960px) {
+  .ql-image-text-column-alt {
+    flex-direction: row-reverse;
+  }
+
+  .ql-image-text-column-alt .column-content {
+    padding: 80px 0;
+    flex-basis: 60%;
+    z-index: 1;
+    margin-top: 0;
+  }
+  .ql-image-text-column-alt .column-image {
+    flex-basis: 40%;
+    z-index: 1;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .ql-image-text-column-alt .column-content-inner {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  /* Reverse columns */
+  .ql-image-text-column-alt.reverse-columns {
+    flex-direction: initial;
+  }
+
+  /* Rolex Editorial Post Styling */
+  .rolex-post .ql-image-text-column-alt .column-content,
+  .rolex-post-admin .ql-image-text-column-alt .column-content {
+    flex-basis: 50%;
+  }
+  .rolex-post .ql-image-text-column-alt .column-image,
+  .rolex-post-admin .ql-image-text-column-alt .column-image {
+    flex-basis: 50%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .ql-image-text-column-alt .column-content {
+    padding: 40px 0;
+  }
+
+  .ql-image-text-column-alt .column-content-inner {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .ql-image-text-column-alt
+    .column-content
+    .ql-button.button-display-inline:not(:first-of-type) {
+    margin-left: 0;
+  }
+}

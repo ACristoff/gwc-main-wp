@@ -1,0 +1,157 @@
+.ql-interactive-slider .ql-slider {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+.ql-interactive-slider .slider-title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.ql-interactive-slider .slider-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  height: 6px;
+  background-color: #245995;
+}
+
+.ql-interactive-slider .ql-slider li {
+  list-style-type: none;
+  transition: 200ms ease;
+}
+
+.ql-interactive-slider .ql-slider .ql-slider-nav {
+  margin-bottom: 0;
+}
+
+.ql-interactive-slider .ql-slider .ql-slider-nav li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.ql-interactive-slider .ql-slider .ql-slider-nav li h5 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 16px 10px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  border: 1px solid #245995;
+  cursor: pointer;
+  transition: 200ms ease;
+}
+
+.ql-interactive-slider .ql-slider .ql-slider-nav li.current h5 {
+  background-color: #245995;
+  color: #fff;
+}
+
+.ql-interactive-slider .ql-slider .ql-slider-nav li h5::after {
+  content: "";
+  background-image: url("../../../assets/icons/arrow-right-blue.svg");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-left: 10px;
+  transition: 200ms ease;
+}
+
+.ql-interactive-slider .ql-slider .ql-slider-nav li.current h5::after {
+  background-image: url("../../../assets/icons/arrow-right-white.svg");
+}
+
+.ql-interactive-slider
+  .ql-slider
+  .ql-slider-nav
+  li
+  .ql-slide-content-item-mobile {
+  max-height: 0px;
+  opacity: 0;
+  transition: max-height 200ms ease;
+}
+.ql-interactive-slider
+  .ql-slider
+  .ql-slider-nav
+  li.current
+  .ql-slide-content-item-mobile {
+  max-height: 100%;
+  opacity: 1;
+}
+
+.ql-interactive-slider .ql-slider .ql-slide-content {
+  position: relative;
+  min-height: 100px;
+  transition: 200ms ease;
+}
+
+.ql-interactive-slider .ql-slider .ql-slide-content li {
+  opacity: 0;
+  transition: 200ms ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ql-interactive-slider .ql-slider .ql-slide-content li.current {
+  opacity: 1;
+}
+
+/* Editor */
+.acf-block-preview .ql-interactive-slider .ql-slider .ql-slide-content li {
+  position: relative;
+}
+
+@media only screen and (min-width: 960px) {
+  .ql-interactive-slider .slider-title {
+    margin-bottom: 100px;
+  }
+  .ql-interactive-slider .ql-slider {
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+  }
+  .ql-interactive-slider .ql-slider::after {
+    content: "";
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #245995
+  }
+  .ql-interactive-slider .ql-slider .ql-slider-nav {
+    margin-right: 20px;
+  }
+  .ql-interactive-slider .ql-slider .ql-slider-nav li {
+    width: max-content;
+  }
+  .ql-interactive-slider .ql-slider .ql-slider-nav li h5 {
+    margin-bottom: 0;
+  }
+  .ql-interactive-slider .ql-slider .ql-slider-nav li:hover h5,
+  .ql-interactive-slider .ql-slider .ql-slider-nav li:focus h5 {
+    background-color: #245995;
+    color: #fff;
+  }
+  .ql-interactive-slider .ql-slider .ql-slider-nav li h5::after {
+    background-image: url("../../../assets/icons/arrow-right-blue.svg");
+  }
+  .ql-interactive-slider .ql-slider .ql-slider-nav li h5.current::after,
+  .ql-interactive-slider .ql-slider .ql-slider-nav li h5:hover::after,
+  .ql-interactive-slider .ql-slider .ql-slider-nav li h5:focus::after {
+    background-image: url("../../../assets/icons/arrow-right-white.svg");
+  }
+  .ql-interactive-slider .ql-slider .ql-slide-content {
+    margin-left: 20px;
+  }
+}
